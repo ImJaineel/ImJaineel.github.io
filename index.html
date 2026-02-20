@@ -1,377 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Jaineel Petiwale</title>
-        <link rel="shortcut icon" href="assets/dev.ico" type="image/x-icon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaineel | ServiceNow Developer</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --text-color: #0f172a;
+            --primary-color: #2563eb;
+            --secondary-color: #64748b;
+            --card-bg: #ffffff;
+        }
 
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
 
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet">
-        <!-- Fonts CSS-->
-        <link rel="stylesheet" href="css/heading.css">
-        <link rel="stylesheet" href="css/body.css">
-    </head>
-    <body id="page-top">
-        
-        <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-            <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Jaineel Petiwale</a>
-                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">PORTFOLIO</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">ABOUT</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT INFO</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#profile">My PROFILE</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact-Form">CONTACT ME</a>
-                        </li>
-                    </ul>
-                </div>
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            padding: 1.5rem 5%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 8rem 5% 5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--secondary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: var(--text-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0.2rem;
+        }
+
+        footer {
+            background-color: var(--card-bg);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Can add a hamburger menu later */
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">Jaineel.</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#projects">Projects</a>
             </div>
         </nav>
-        
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <img class="masthead-avatar mb-5" src="assets/img/JP.png" alt="My Photo"/>
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading mb-0">Jaineel Petiwale</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0">B.Tech Student - Freelancer</p>
+    </header>
+
+    <section class="hero">
+        <h1>Hi, I'm Jaineel</h1>
+        <h2>ServiceNow Developer | Cloud & System Administration Enthusiast</h2>
+        <p style="margin-bottom: 2rem; color: var(--secondary-color);">Based in Pune, Maharashtra</p>
+        <a href="./jaineel_petiwale_resume.pdf" class="btn">View My Resume</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+            I am a ServiceNow Developer currently working at Flex Ltd., where I transitioned from an intern to a full-time role following my B.Tech graduation in May 2023. I specialize in building robust workflows and integrations within the ServiceNow ecosystem, while continuously exploring server administration, Linux environments, and cloud infrastructure.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>ServiceNow</h3>
+                <p>IT Service Management (ITSM), Custom Applications, Platform Integrations, Workflow Automation.</p>
             </div>
-        </header>
-        
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">PORTFOLIO</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Portfolio Items-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div><img class="img-fluid" src="assets/img/portfolio/mental-health.jpg" alt="Mental Health Prediction"/>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <center>
-                            <img class="img-fluid" src="assets/img/portfolio/chatapp.jpeg" alt="ChatApp" width="300px" height="300px"/>
-                            </center>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <center>
-                                <img class="img-fluid" src="assets/img/portfolio/bot.jpg" alt="ChatBot in Whatsapp, Telegram and Discord" width="250px" height="300px"/>
-                            </center>
-                        </div>
-                    </div>
-                </div>
+            <div class="card">
+                <h3>Infrastructure & Cloud</h3>
+                <p>Linux & Unix Environments, Windows Server Administration, Amazon Web Services (AWS).</p>
             </div>
-        </section>
-        
-        <!-- Portfolio Modal-->
-        <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal0Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Mental Health Prediction</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/mental-health.jpg" alt="Mental Health Prediction"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">My Github Repository -> <a href="https://github.com/Leap-Tribe-I/Mental-Health-Prediction">Git Repo</a></p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="card">
+                <h3>Containerization & Hardware</h3>
+                <p>Docker, Self-Hosting, Proxy Servers, Raspberry Pi Home Labs.</p>
             </div>
         </div>
-        
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">ChatApp</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/chatapp.jpeg" alt="ChatApp" width="200px" height="200px"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">My Github Repository -> <a href="https://github.com/ImJaineel/chatapp">Git Repo</a>  </p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    </section>
+
+    <section id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Active Credentials</h3>
+                <br>
+                <ul>
+                    <li><strong>CAD:</strong> Certified Application Developer</li>
+                    <li><strong>CSA:</strong> Certified System Administrator</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>In Progress (Target: May 2026)</h3>
+                <br>
+                <ul>
+                    <li><strong>CIS:</strong> Data Foundations</li>
+                    <li><strong>CIS:</strong> IT Service Management (ITSM)</li>
+                </ul>
             </div>
         </div>
-        
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">ChatBot in Whatsapp, Telegram and Discord</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/bot.jpg" alt="ChatApp"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">My Github Repository -> <a href="https://github.com/ImJaineel/Bot">Git Repo</a></p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Enterprise ServiceNow Integrations</h3>
+                <p style="margin-bottom: 1rem;">Developed and maintained key platform workflows and custom applications at Flex Ltd., improving operational efficiency.</p>
+                <span class="tag">ServiceNow</span>
+                <span class="tag">ITSM</span>
+                <span class="tag">JavaScript</span>
+            </div>
+            <div class="card">
+                <h3>Self-Hosted Home Lab</h3>
+                <p style="margin-bottom: 1rem;">Configured a personal server ecosystem on Raspberry Pi utilizing Docker containers for network management and proxy services.</p>
+                <span class="tag">Raspberry Pi</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Linux</span>
             </div>
         </div>
-        
-        <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block text-white">ABOUT</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ml-auto">
-                        <center>
-                            
-                            <p class="pre-wrap lead">I am Jaineel Petiwale, currently pursuing Bachelor of Technology in Computer Engineering with Specialization in Information Systems form Ajeenkya DY Patil University, Pune.</p>
-                        </center>
-                    </div>
-                    <div class="col-lg-4 mr-auto">
-                        <center>
-                            <p class="pre-wrap lead">I have great expertise in Python, <br>Web dev and Android App Dev.<br>I also like to work with AWS.<br>And have good interest in Administration job of System and Network.</p>
-                        </center>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="page-section" id="contact">
-            <div class="container">
-                <!-- Contact Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Contact Section Content-->
-                <div class="row justify-content-center">
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-column align-items-center">
-                            <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
-                            <div class="text-muted">Phone</div>
-                            <a class="lead font-weight-bold" href="tel:+91 8200147220">+91 8200147220</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-column align-items-center">
-                            <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
-                            <div class="text-muted">Email</div><a class="lead font-weight-bold" href="mailto:Jaineel2001@gmail.com">Jaineel2001@gmail.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="page-section bg-primary text-white mb-0" id="profile">
-            <div class="container">
-                <!-- About Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block text-white">My Profile</h2>
-                </div>
-                <!-- Place this tag where you want the button to render. -->
-                <center>
-                    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="jaineelpetiwale" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/jaineelpetiwale?trk=profile-badge">Jaineel Petiwale</a></div>
-                    <br>
-                    <a class="github-button" href="https://github.com/ImJaineel" data-size="large" aria-label="Follow @ImJaineel on GitHub">Follow @ImJaineel</a>
-                </center>
-                <div class="text-center mt-4"><a class="btn btn-outline-light btn-xl" role="button" href="Jaineel-Petiwale_Resume.pdf" data-bs-target="Jaineel-Petiwale_Resume.pdf"><i class="fa fa-download me-2"></i><span>My Resume</span></a></div>
-            </div>
-        </section>
-        
-        <section class="page-section" id="contact-Form">
-            <div class="container">
-                <h2 class="text-uppercase text-center text-secondary mb-0">Contact Me</h2>
-                <hr class="star-dark mb-5">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
-                            <div class="control-group">
-                                <div class="mb-0 form-floating controls pb-2">
-                                    <label class="form-label">Name</label>
-                                    <input class="form-control" type="text" id="name" required="" placeholder="Name">
-                                    <small class="form-text text-danger help-block"></small>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="mb-0 form-floating controls pb-2">
-                                    <label class="form-label">Email Address</label>
-                                    <input class="form-control" type="email" id="email" required="" placeholder="Email Address">
-                                    <small class="form-text text-danger help-block"></small>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="form-label">Phone Number</label>
-                                <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="tel" id="phone" required="" placeholder="Phone Number">
-                                    <small class="form-text text-danger help-block"></small>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="mb-5 form-floating controls pb-2">
-                                    <label class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" required="" placeholder="Message" style="height: 150px;"></textarea>
-                                    <small class="form-text text-danger help-block"></small>
-                                </div>
-                            </div>
-                            <div id="success"></div>
-                            <div>
-                                <button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="mb-4">LOCATION</h4>
-                        <p class="pre-wrap lead mb-0">Gujarat, India<br>Maharashtra, India </p>
-                    </div>
-                    <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="mb-4">AROUND THE WEB</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/imjaineelpetiwale"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/im_Jaineel"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/jaineelpetiwale/"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                    </div>
-                    <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="mb-4">ABOUT Me</h4>
-                        <p class="pre-wrap lead mb-0">I am a Full time B.Tech Student, <br> as SDE and <br>Freelancer for my free-time </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        
-        <!-- Copyright Section-->
-        <section class="copyright py-4 text-center text-white">
-            <div class="container"><small class="pre-wrap">Copyright © Jaineel 2022 </small></div>
-        </section>
-        
-        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
-        <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
-        
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    </section>
 
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <footer>
+        <p>&copy; 2026 Jaineel. Built with HTML & CSS.</p>
+        <div style="margin-top: 1rem;">
+            <a href="mailto:jaineel2001@gmail.com" style="color: var(--primary-color); text-decoration: none; margin: 0 10px;">Email Me</a>
+            <a href="https://in.linkedin.com/in/jaineelpetiwale" style="color: var(--primary-color); text-decoration: none; margin: 0 10px;">LinkedIn</a>
+            <a href="https://github.com/ImJaineel" style="color: var(--primary-color); text-decoration: none; margin: 0 10px;">GitHub</a>
+        </div>
+    </footer>
 
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-
-        <!-- Linkedin Card Js -->
-        
-        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
-        <!-- Github Button JS-->
-        <!-- Place this tag in your head or just before your close body tag. -->
-        <script async defer src="https://buttons.github.io/buttons.js"></script>
-    </body>
+</body>
 </html>
-<script type="module"> // Firebase wali script
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyDJTl01iHSbA59cEPfjpAJGDoPuTk3kDms",
-      authDomain: "jaineelpetiwale.firebaseapp.com",
-      projectId: "jaineelpetiwale",
-      storageBucket: "jaineelpetiwale.appspot.com",
-      messagingSenderId: "734308874808",
-      appId: "1:734308874808:web:8304497bb19a278eac04cd",
-      measurementId: "G-YCGEB569R1"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
