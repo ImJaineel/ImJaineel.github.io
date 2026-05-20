@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "title": "Jaineel | ServiceNow Developer"
+  },
+
+  "nav": {
+    "logo": "Jaineel.",
+    "links": [
+      { "label": "About",          "href": "#about" },
+      { "label": "Skills",         "href": "#skills" },
+      { "label": "Certifications", "href": "#certifications" },
+      { "label": "Projects",       "href": "#projects" }
+    ]
+  },
+
+  "hero": {
+    "greeting": "👋 Hi, I'm Jaineel",
+    "subtitle": "ServiceNow Developer | Cloud & System Administration Enthusiast",
+    "location": "📍 Based in Pune, Maharashtra",
+    "cta": {
+      "label": "📄 View My Resume",
+      "href": "./jaineel_petiwale_resume.pdf"
+    }
+  },
+
+  "about": {
+    "heading": "🙋 About Me",
+    "body": "I am a ServiceNow Developer currently working at Flex Ltd., where I transitioned from an intern to a full-time role following my B.Tech graduation in May 2023. I specialize in building robust workflows and integrations within the ServiceNow ecosystem, while continuously exploring server administration, Linux environments, and cloud infrastructure."
+  },
+
+  "skills": {
+    "heading": "🛠️ Technical Expertise",
+    "items": [
+      {
+        "title": "⚙️ ServiceNow",
+        "body": "IT Service Management (ITSM), Custom Applications, Platform Integrations, Workflow Automation."
+      },
+      {
+        "title": "🗄️ CMDB & CSDM",
+        "body": "IRE-based CI creation, CSDM data model governance, Service Graph Connectors, CMDB health KPIs, and Data Manager policies."
+      },
+      {
+        "title": "☁️ Infrastructure & Cloud",
+        "body": "Linux & Unix Environments, Windows Server Administration, Amazon Web Services (AWS)."
+      },
+      {
+        "title": "🐳 Containerization & Hardware",
+        "body": "Docker, Self-Hosting, Proxy Servers, Raspberry Pi Home Labs."
+      },
+      {
+        "title": "🤖 AI & LLM Tooling",
+        "body": "Building AI-powered developer tools using Claude & Anthropic APIs. Prompt engineering, structured outputs, and integrating LLMs into enterprise workflows."
+      },
+      {
+        "title": "🔌 MCP Development",
+        "body": "Designing and building Model Context Protocol (MCP) servers — enabling AI agents like Claude to securely query ServiceNow instances for incidents, scripts, CMDB, update sets, and more."
+      }
+    ]
+  },
+
+  "certifications": {
+    "heading": "🏅 Certifications",
+    "groups": [
+      {
+        "title": "✅ Active Credentials",
+        "items": [
+          { "label": "CIS-DF", "name": "CIS — Data Foundations" },
+          { "label": "CAD",    "name": "Certified Application Developer" },
+          { "label": "CSA",    "name": "Certified System Administrator" }
+        ]
+      },
+      {
+        "title": "🎯 In Progress",
+        "items": [
+          { "label": "CIS", "name": "IT Service Management (ITSM)" },
+          { "label": "CIS", "name": "Discovery" }
+        ]
+      }
+    ]
+  },
+
+  "projects": {
+    "heading": "🚀 Featured Projects",
+    "items": [
+      {
+        "title": "⚡ Enterprise ServiceNow Integrations",
+        "body": "Developed and maintained key platform workflows and custom applications at Flex Ltd., improving operational efficiency.",
+        "tags": ["ServiceNow", "ITSM", "JavaScript"],
+        "links": []
+      },
+      {
+        "title": "🔌 SN-MCP-Server",
+        "body": "A read-only MCP server for ServiceNow — lets Claude Desktop and any MCP-compatible AI agent query incidents, scripts, CMDB, update sets & more. Supports multi-instance routing.",
+        "tags": ["MCP", "Node.js", "Claude AI", "ServiceNow"],
+        "links": []
+      },
+      {
+        "title": "🏠 Self-Hosted Home Lab",
+        "body": "Configured a personal server ecosystem on Raspberry Pi utilizing Docker containers for network management and proxy services.",
+        "tags": ["Raspberry Pi", "Docker", "Linux"],
+        "links": []
+      }
+    ]
+  },
+
+  "footer": {
+    "copy": "✨ © 2026 Jaineel. Built with HTML & CSS.",
+    "links": [
+      { "label": "📧 Email Me",  "href": "mailto:Jaineel2001@gmail.com" },
+      { "label": "💼 LinkedIn",  "href": "https://in.linkedin.com/in/jaineelpetiwale" },
+      { "label": "🐙 GitHub",    "href": "https://github.com/ImJaineel" }
+    ]
+  }
+}
