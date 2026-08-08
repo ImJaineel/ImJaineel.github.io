@@ -65,16 +65,18 @@
       {
         "title": "✅ Active Credentials",
         "items": [
-          { "label": "CIS-ITSM", "name": "CIS — IT Service Management (ITSM)" },
-          { "label": "CIS-DF", "name": "CIS — Data Foundations" },
-          { "label": "CAD",    "name": "Certified Application Developer" },
           { "label": "CSA",    "name": "Certified System Administrator" }
+          { "label": "CAD",    "name": "Certified Application Developer" },
+          { "label": "CIS-DF", "name": "CIS — Data Foundations" },
+          { "label": "CIS-ITSM", "name": "CIS — IT Service Management (ITSM)" },
         ]
       },
       {
-        "title": "🎯 In Progress",
+        "title": "🎯 In Pipeline",
         "items": [
-          { "label": "CIS", "name": "Discovery" }
+          { "label": "CIS-DISCO", "name": "Discovery" },
+          { "label": "CIS-SM", "name": "Service Mapping" },
+          { "label": "CIS-EM", "name": "Event Management" }
         ]
       }
     ]
