@@ -65,10 +65,10 @@
       {
         "title": "✅ Active Credentials",
         "items": [
-          { "label": "CSA",    "name": "Certified System Administrator" }
+          { "label": "CSA",    "name": "Certified System Administrator" },
           { "label": "CAD",    "name": "Certified Application Developer" },
           { "label": "CIS-DF", "name": "CIS — Data Foundations" },
-          { "label": "CIS-ITSM", "name": "CIS — IT Service Management (ITSM)" },
+          { "label": "CIS-ITSM", "name": "CIS — IT Service Management (ITSM)" }
         ]
       },
       {
