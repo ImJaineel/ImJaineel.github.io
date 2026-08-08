@@ -65,6 +65,7 @@
       {
         "title": "✅ Active Credentials",
         "items": [
+          { "label": "CIS-ITSM", "name": "CIS — IT Service Management (ITSM)" },
           { "label": "CIS-DF", "name": "CIS — Data Foundations" },
           { "label": "CAD",    "name": "Certified Application Developer" },
           { "label": "CSA",    "name": "Certified System Administrator" }
@@ -73,7 +74,6 @@
       {
         "title": "🎯 In Progress",
         "items": [
-          { "label": "CIS", "name": "IT Service Management (ITSM)" },
           { "label": "CIS", "name": "Discovery" }
         ]
       }
